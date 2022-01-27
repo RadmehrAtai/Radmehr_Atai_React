@@ -1,8 +1,10 @@
+var arr = new Array(100);
+
 export function makeEmptyArray(length) {
     return [...new Array(length)];
 }
 
-export function addItem(arr, title, desc, status) {
+export function addItem(title, desc, status) {
     arr.push({
         title: title,
         desc: desc,
@@ -11,5 +13,5 @@ export function addItem(arr, title, desc, status) {
 }
 
 export function getDict() {
-    return
+    return arr;
 }

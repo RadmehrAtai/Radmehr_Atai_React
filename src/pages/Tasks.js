@@ -1,21 +1,9 @@
 import Card from '../components/Card'
 import "../styles/Tasks.css";
+import {getDict} from "../utils/array";
 
 const Tasks = () => {
-    const cards = [
-        {
-            key: 2,
-            title: "name",
-            desc: "S",
-            status: "ToDo"
-        },
-        {
-            key: 3,
-            title: "name",
-            desc: "S",
-            status: "ToDo"
-        }
-    ];
+    const cards = getDict();
 
     const edit = (e) => {
         e.preventDefault();
@@ -28,7 +16,6 @@ const Tasks = () => {
                     {cards?.map((card) => {
                         return (
                             <Card
-                                key={card.key}
                                 title={card.title}
                                 desc={card.desc}
                                 status={card.status}

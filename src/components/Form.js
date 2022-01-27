@@ -10,7 +10,7 @@ const Form = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        addItem(myDict, title, desc, status);
+        addItem(title, desc, status);
         alert("Card is added.");
     }
 
