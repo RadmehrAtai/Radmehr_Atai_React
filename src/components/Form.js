@@ -1,17 +1,15 @@
 import React, {useState} from "react";
-import {addItem} from '../utils/array';
-import Status from "../utils/status";
+import {addItem} from '../utils/Array';
+import Status from "../utils/Status";
 
 const Form = () => {
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("");
     const status = useState(Status.TODO);
-    const [id, setId] = useState(1);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        addItem(id, title, desc, status);
-        setId(id + 1);
+        addItem(title, desc, status);
         alert("Card is added.");
     }
 
