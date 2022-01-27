@@ -1,16 +1,16 @@
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
 .tasks-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .warning {
     margin: 20px 0;
-    color: white;
+    color: black;
 }

@@ -1,11 +1,8 @@
-var arr = new Array(100);
+var arr = [];
 
-export function makeEmptyArray(length) {
-    return [...new Array(length)];
-}
-
-export function addItem(title, desc, status) {
+export function addItem(id, title, desc, status) {
     arr.push({
+        id: id,
         title: title,
         desc: desc,
         status: status
