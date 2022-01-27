@@ -1,12 +1,18 @@
 import React, {useState} from "react";
+import {addItem, makeEmptyArray} from '../utils/array';
+import Status from "../utils/status";
+import {Card} from "../model/Card";
 
 const Form = () => {
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("");
+    const status = useState(Status.TODO);
+    const [myArray, setMyArray] = useState(makeEmptyArray());
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert(`The name you entered was: ${title}`)
+        addItem(myArray, new Card(title, desc, status));
+        alert("Card is added.");
     }
 
     return (

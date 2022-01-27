@@ -1,4 +1,5 @@
-const Card = (title, desc, status, handleEdit) => {
+const Card = ({title, desc, status, handleEdit}) => {
+
     return (
         <div className="card" style="width: 18rem;">
             <div className="card-body">

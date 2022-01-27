@@ -1,23 +1,15 @@
-import React from "react";
+var arr = new Array(100);
 
-var arr;
-
-function createArray() {
-    arr = new Array(100);
+export function makeEmptyArray() {
+    return arr;
 }
 
-function addToArray(card) {
-    arr[0] = card;
-    arr++;
+export function addItem(item) {
+    var i = 0;
+    arr[i] = item;
+    i++;
 }
 
-function getAll() {
-    var i, card;
-    for (i = 0; i < arr.length; i = i + 1) {
-        card = arr[i];
-    }
+export function getArray() {
+    return arr;
 }
-
-export default createArray;
-addToArray();
-getAll();

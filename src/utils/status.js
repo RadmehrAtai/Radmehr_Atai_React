@@ -1,10 +1,10 @@
-const status = {
-    status_todo: "ToDo",
-    status_blocked: "Blocked",
-    status_inProgress: "InProgress",
-    status_inQA: "InQA",
-    status_done: "Done",
-    status_deployed: "Deployed",
+const Status = {
+    TODO: "ToDo",
+    BLOCKED: "Blocked",
+    IN_PROGRESS: "InProgress",
+    IN_QA: "InQA",
+    DONE: "Done",
+    DEPLOYED: "Deployed",
 }
 
-export default status
+export default Status
