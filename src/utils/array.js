@@ -1,15 +1,15 @@
-var arr = new Array(100);
-
-export function makeEmptyArray() {
-    return arr;
+export function makeEmptyArray(length) {
+    return [...new Array(length)];
 }
 
-export function addItem(item) {
-    var i = 0;
-    arr[i] = item;
-    i++;
+export function addItem(arr, title, desc, status) {
+    arr.push({
+        title: title,
+        desc: desc,
+        status: status
+    });
 }
 
-export function getArray() {
-    return arr;
+export function getDict() {
+    return
 }

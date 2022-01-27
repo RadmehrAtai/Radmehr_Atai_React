@@ -1,17 +1,16 @@
 import React, {useState} from "react";
 import {addItem, makeEmptyArray} from '../utils/array';
 import Status from "../utils/status";
-import {Card} from "../model/Card";
 
 const Form = () => {
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("");
     const status = useState(Status.TODO);
-    const [myArray, setMyArray] = useState(makeEmptyArray());
+    const [myDict, setMyDict] = useState(makeEmptyArray(100));
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        addItem(myArray, new Card(title, desc, status));
+        addItem(myDict, title, desc, status);
         alert("Card is added.");
     }
 
