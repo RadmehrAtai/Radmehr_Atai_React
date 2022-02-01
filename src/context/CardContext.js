@@ -6,11 +6,12 @@ export const CardContext = createContext();
 const ToDoApp = ({children}) => {
     const [cardsList, setCardsList] = useState([]);
 
-    const fetchCards = async () => {
+    useEffect(() => {
         setCardsList(getCards());
-    }
+    }, [useEffect]);
 
-    const editHandler = (id) => {
+    const editHandler = (id, e) => {
+        e.preventDefault();
         setCardsList(updateCard(id));
         localStorage.setItem("Cards", JSON.stringify(cardsList));
     };
