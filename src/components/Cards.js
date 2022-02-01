@@ -11,7 +11,7 @@ const Cards = ({list, edit}) => {
                         title={card.title}
                         desc={card.desc}
                         status={card.status}
-                        handleEdit={edit}
+                        handleEdit={(e) => edit(card.id, e)}
                     />
                 )
             })}
