@@ -4,10 +4,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ToDoApp from "./context/CardContext";
 
 ReactDOM.render(
     <React.StrictMode>
-        <App/>
+        <ToDoApp>
+            <App/>
+        </ToDoApp>
     </React.StrictMode>,
     document.getElementById('root')
 );

@@ -4,19 +4,16 @@ import {getCards, updateCard} from "../utils/Array";
 export const CardContext = createContext();
 
 const ToDoApp = ({children}) => {
-    let [cardsList, setCardsList] = useState(getCards());
+    const [cardsList, setCardsList] = useState([]);
 
-    const editHandler = (id, e) => {
-        e.preventDefault();
-        cardsList = updateCard(id);
-//        setCardsList(cardsList);
-//        localStorage.setItem("Cards", JSON.stringify(cardsList));
-    };
+    const fetchCards = async () => {
+        setCardsList(getCards());
+    }
 
-    useEffect(() => {
-        setCardsList(cardsList);
+    const editHandler = (id) => {
+        setCardsList(updateCard(id));
         localStorage.setItem("Cards", JSON.stringify(cardsList));
-    }, [cardsList]);
+    };
 
     return (
         <CardContext.Provider
